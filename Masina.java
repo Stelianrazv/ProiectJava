@@ -1,7 +1,7 @@
 package com.Inmatriculare.Auto;
 
-import java.sql.SQLException;
-import java.sql.Statement;
+        import java.sql.SQLException;
+        import java.sql.Statement;
 
 public class Masina {
     int id;
@@ -29,8 +29,8 @@ public class Masina {
         String insertDb = "insert into masina"
                 + "(id,Prenume,Nume,Judet,Marca,Model,An,NumarInmatriculare)"
                 + "values ("
-                + this.id + ", '" + this.Prenume + ", '" +
-                this.Nume + ", '" + this.Judet + ", '" + this.Marca + ", '" + this.Model + ", '" + this.An + ", '" + this.NumarInmatriculare + ")";
+                + this.id + ", '" + this.Prenume + "','" +
+                this.Nume + "'," + this.Judet + "','" + this.Marca + "','" + this.Model + "','" + this.An + "','" + this.NumarInmatriculare + ")";
         try {
             myStmt.executeUpdate(insertDb);
         } catch (SQLException e) {
