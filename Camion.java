@@ -30,7 +30,7 @@ public class Camion {
                 + "(id,Prenume,Nume,Judet,Marca,Model,An,NumarInmatriculare)"
                 + "values ("
                 + this.id + ", '" + this.Prenume + "','" +
-                this.Nume + ", '" + this.Judet + ",'" + this.Marca + ", '" + this.Model + ",'" + this.An + ", '" + this.NumarInmatriculare + ")";
+                this.Nume + "'," + this.Judet + "','" + this.Marca + "','" + this.Model + "','" + this.An + "','" + this.NumarInmatriculare + ")";
         try {
             myStmt.executeUpdate(insertDb);
         } catch (SQLException e) {
