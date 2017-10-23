@@ -5,7 +5,6 @@ import java.sql.*;
 /* Clasa principala de unde incepe aplicatia sa se execute*/
 public class MainApp {
     static int masinaCount = 1;
-    static int camionCount = 1;
     public static void main(String[] args) {
         // Deschide prima fereastra - Welcome
         String dbUrl = "jdbc:postgresql:cars";
@@ -23,16 +22,8 @@ public class MainApp {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        try {
-            Connection myConn2 = DriverManager.getConnection( dbUrl, user, password );
-            Statement myStmt2 = myConn2.createStatement();
-            ResultSet myRs2 = myStmt2.executeQuery( "select * from camion" );
-            while (myRs2.next()) {
-                camionCount++;
-            }
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
+
+
     }
 }
 
