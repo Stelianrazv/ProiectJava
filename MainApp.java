@@ -22,7 +22,17 @@ public class MainApp {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        try {
+            Connection myConn = DriverManager.getConnection(dbUrl, user, password);
+            Statement myStmt = myConn.createStatement();
+            ResultSet myRs = myStmt.executeQuery("select * from camion");
+            while (myRs.next()) {
+                masinaCount++;
+            }
+            new WelcomeGui(myStmt);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 }
