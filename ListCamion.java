@@ -33,13 +33,17 @@ public class ListCamion extends JFrame {
 
         JPanel listPanel = new JPanel();
         columnNames = new Vector();
-        columnNames.add( "ID" );
-        columnNames.add( "First Name" );
-        columnNames.add( "Last Name" );
-        columnNames.add( "Year" );
+        columnNames.add("ID");
+        columnNames.add("Prenume");
+        columnNames.add("Nume");
+        columnNames.add("Judet");
+        columnNames.add("Marca");
+        columnNames.add("Model");
+        columnNames.add("An");
+        columnNames.add("Nr. Inmatriculare");
 
         try {
-            ResultSet myRs = myStmt.executeQuery( "select * from masina" );
+            ResultSet myRs = myStmt.executeQuery( "select * from camion" );
             data = new Vector();
             while (myRs.next()) {
                 row = new Vector();
@@ -111,4 +115,3 @@ public class ListCamion extends JFrame {
             }
         }
     }
-}
