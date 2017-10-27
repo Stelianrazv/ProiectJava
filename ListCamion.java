@@ -101,17 +101,22 @@ public class ListCamion extends JFrame {
         this.setVisible( true );
     }
 
-    // Pentru events
+    // Pentru eveniment
     private class ListenForButton implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+
             // Sursa eventului este butonul "EXIT"
-            if (e.getSource() == exitButton) {
-                // Inchide fereastra List
-                System.exit( 0 );
+            if (e.getSource() == exitButton){
+                // Inchide fereastra ListCamion
+                System.exit(0);
+
+                // Sursa eventului este butonul "Meniu"
             } else if (e.getSource() == menuButton) {
-                new WelcomeGui( myStmt );
+                // Ajunge la prima fereastra "WelcomeGui"
+                new WelcomeGui(myStmt);
                 dispose();
             }
         }
     }
+}
