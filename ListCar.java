@@ -100,15 +100,20 @@ public class ListCar extends JFrame {
         // Face fereastra vizibila
         this.setVisible(true);
     }
-    // Pentru events
+
+    // Pentru eveniment
     private class ListenForButton implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+
             // Sursa eventului este butonul "EXIT"
             if (e.getSource() == exitButton){
-                // Inchide fereastra List
+                // Inchide fereastra ListCar
                 System.exit(0);
+
+                // Sursa eventului este butonul "Meniu"
             } else if (e.getSource() == menuButton) {
+                // Ajunge la prima fereastra "WelcomeGui"
                 new WelcomeGui(myStmt);
                 dispose();
             }
